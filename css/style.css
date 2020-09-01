@@ -91,11 +91,26 @@ a::after {
   margin: 0;
   font-size: 6px;
   line-height: 1.5em;
+  cursor: pointer;
+  animation: all ease-in-out 2s;
 }
 .hamburger-menu span{
     width: 100%;
     height: 1px;
     background-color: black;
+    animation: all ease-in-out 2s;
+}
+.hamburger-menu.active :nth-child(even){
+    animation: transform ease-in-out 2s;
+    transform: rotate(45deg) translate(-2px, -4px);
+}
+.hamburger-menu.active{
+    animation: color ease-in-out 2s;
+    color: white;
+}
+.hamburger-menu.active :nth-child(odd){
+    animation: transform ease-in-out 2s;
+    transform: rotate(-45deg) translate(-3px, 5px);
 }
 section{
     position: relative;
